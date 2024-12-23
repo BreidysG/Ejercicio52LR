@@ -42,8 +42,10 @@ function displayCircles(circleNumber) {
     circleContainer.innerHTML = ''; // Limpiar contenedor
 
     let sizes = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]; // Tamaño de los círculos
-    if (window.innerHeight <= 700) {
-        sizes = [ 75, 100, 125, 150, 175, 200, 225, 250, 275, 300]; // Reducir alturas en dispositivos móviles
+    if (window.innerHeight <= 600) {
+        sizes = [ 37.5, 50, 65, 85, 100, 112.5, 125, 137.5, 150, 162.5]; // Reducir alturas en dispositivos móviles
+    }if(window.innerWidth <= 400){
+        sizes = [37.5, 50, 65, 85, 100, 112.5, 125, 137.5, 150, 162.5];
     }
     // Crear círculo
     const circle = document.createElement('div');
